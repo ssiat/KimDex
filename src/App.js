@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
 import Header from './Header'
-import Tips from './Tips'
+import Tips from './components/Tips'
 class App extends Component {
     render() {
         return (

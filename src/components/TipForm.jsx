@@ -61,7 +61,8 @@ export class TipForm extends Component {
         </form>
         <form>
           <Row>
-            <Col xs="10">
+            <Col xs="7" />
+            <Col xs="3">
               <InputGroup>
                 <Input
                   placeholder="지연 시간"

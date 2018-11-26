@@ -34,7 +34,7 @@ export class TipForm extends Component {
   handleSetDelayTime = event => {
     event.preventDefault();
     console.log(this.state)
-    Axios.post("http://localhost:3002/setting/delaytime", {
+    Axios.post("http://kimdex.ssiat.xyz/bot/setting/delaytime", {
       time: this.state.delayTime
     });
   };

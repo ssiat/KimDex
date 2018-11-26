@@ -15,7 +15,6 @@ export class TipTable extends Component {
     return (
       <Table>
         <thead>
-          <th>#</th>
           <th>Text</th>
           <th>Edit</th>
         </thead>

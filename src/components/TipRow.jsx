@@ -25,7 +25,6 @@ export class TipRow extends Component {
 
     return (
       <tr>
-        <th scope="row">{id}</th>
         <td>
           {this.props.edit === true ? (
             <Input type="text" name="text" defaultValue={text} />

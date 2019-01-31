@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Button,
   Col,
@@ -6,16 +6,16 @@ import {
   InputGroup,
   InputGroupAddon,
   Row
-} from "reactstrap";
-import Axios from "axios";
+} from 'reactstrap';
+import Axios from 'axios';
 
 export class TipForm extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      text: "",
-      delayTime: ""
+      text: '',
+      delayTime: ''
     };
   }
 
@@ -28,13 +28,13 @@ export class TipForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.onCreate(this.state);
-    this.setState({ text: "" });
+    this.setState({ text: '' });
   };
 
   handleSetDelayTime = event => {
     event.preventDefault();
-    console.log(this.state)
-    Axios.post("https://kimdex.ssiat.xyz/bot/setting/delaytime", {
+    console.log(this.state);
+    Axios.post('https://kimdex.ssiat.xyz/bot/setting/delaytime', {
       time: this.state.delayTime
     });
   };
@@ -74,7 +74,11 @@ export class TipForm extends Component {
               </InputGroup>
             </Col>
             <Col xs="2" className="align-items-center">
-              <Button type="submit" color="primary" onClick={this.handleSetDelayTime}>
+              <Button
+                type="submit"
+                color="primary"
+                onClick={this.handleSetDelayTime}
+              >
                 적용
               </Button>
             </Col>

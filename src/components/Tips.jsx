@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Button, Container, Col, Input, Row, Table } from "reactstrap";
-import Axios from "axios";
-import TipForm from "./TipForm";
-import TipTable from "./TipTable";
+import React, { Component } from 'react';
+import { Button, Container, Col, Input, Row, Table } from 'reactstrap';
+import Axios from 'axios';
+import TipForm from './TipForm';
+import TipTable from './TipTable';
 
 export class Tips extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ export class Tips extends Component {
   }
 
   handleCreate = data => {
-    Axios.post("https://kimdex.ssiat.xyz/api/tips", { text: data.text }).then(
+    Axios.post('https://kimdex.ssiat.xyz/api/tips', { text: data.text }).then(
       res => {
         const { tips } = this.state;
         this.setState({
@@ -34,7 +34,7 @@ export class Tips extends Component {
   };
 
   componentDidMount() {
-    Axios.get("https://kimdex.ssiat.xyz/api/tips").then(res => {
+    Axios.get('https://kimdex.ssiat.xyz/api/tips').then(res => {
       const tips = res.data;
       this.setState({ tips });
       console.log(tips);

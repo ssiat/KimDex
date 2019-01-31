@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { Button, Input } from "reactstrap";
+import React, { Component } from 'react';
+import { Button, Input } from 'reactstrap';
 
 export class TipRow extends Component {
   static defaultProps = {
     tip: {
       id: 0,
-      text: "Null"
+      text: 'Null'
     }
   };
 

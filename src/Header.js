@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -6,8 +6,8 @@ import {
   ButtonToolbar,
   ButtonGroup,
   Button
-} from "reactstrap";
-import MaterialIcon from "material-icons-react";
+} from 'reactstrap';
+import MaterialIcon from 'material-icons-react';
 
 class Header extends Component {
   render() {

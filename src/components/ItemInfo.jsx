@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Media } from "reactstrap";
+import React, { Component } from 'react';
+import { Media } from 'reactstrap';
 
 export default class ItemInfo extends Component {
   render() {
@@ -8,16 +8,29 @@ export default class ItemInfo extends Component {
     return (
       <Media className="my-4" tag="li">
         <Media left>
-          <Media object className="mr-3" data-src="holder.js/64x64" alt="" />
+          <Media
+            object
+            className="mr-3"
+            style={{ imageRendering: 'pixelated' }}
+            src="img/unknown.png"
+            alt=""
+            width="64px"
+            height="64px"
+          />
         </Media>
         <Media body>
           <Media heading>
             {itemName}
-            <small className="text-muted">{itemId}</small>
+            <small className="text-muted ml-1">{pad(itemId, 3)}</small>
           </Media>
           {description}
         </Media>
       </Media>
     );
   }
+}
+
+function pad(n, width) {
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
 }
